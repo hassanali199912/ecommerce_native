@@ -6,13 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ShopEase</title>
     <link rel="stylesheet" href="../css/uitility.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/headerandfooter.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
 <body>
 
-    <h1>Home Page</h1>
+   <header>
+    <div class="header_top">
+        <div class="container ">
+            <p class="header_top_left">Hi<span> Hassan</span> </p>
+            <ul class="header_top_right">
+                <li><a href="login.html">Login</a></li>
+                <p> | </p>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="home.html"><img src="../images/logo.png" alt="logo"></a>
+            </div>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+            <div class="cartAndWishlist">
+                <a href="wishlist.html" class="icon"><i class="fa-solid fa-heart"></i></a>
+                <a href="cart.html" class="icon"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+        </div>
+       
+    </nav>
+   </header>
 
 
     <script src="../js/main.js"></script>

@@ -1,0 +1,131 @@
+header div.header_top {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+   
+}
+header div.header_top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+   
+}
+header div.header_top .header_top_left{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+header div.header_top .header_top_left span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+header div.header_top .header_top_right {
+    display: flex;
+    gap: 1rem;
+}
+
+header div.header_top .header_top_right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header div.header_top .header_top_right a:hover {
+    color:var(--primary);
+}
+
+/* General styling for the nav element */
+nav {
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for a professional look */
+}
+
+/* Container inside nav */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+nav .logo img {
+height: 50px;   
+}
+
+/* Navigation links styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333; /* Dark text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 100ms ease;
+}
+
+nav ul li a:hover {
+    color: var(--primary); /* Assuming --primary is a dark color */
+}
+
+/* Search bar styling */
+nav .search {
+    display: flex;
+    align-items: center;
+}
+
+nav .search input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 3px;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+}
+
+nav .search button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #333; /* Dark background color */
+    color: white;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 50ms ease-out;
+}
+
+nav .search button:hover {
+    background-color: #555; /* Slightly lighter dark color */
+}
+
+/* Styling for cartAndWishlist container */
+nav .cartAndWishlist {
+    display: flex;
+    align-items: center;
+}
+
+nav .cartAndWishlist .icon {
+    color: #333; /* Dark text color */
+    font-size: 20px; /* Adjust the size as needed */
+    margin-left: 15px; /* Space between icons */
+    transition: color 300ms ease;
+}
+
+nav .cartAndWishlist .icon:hover {
+    color: var(--primary); /* Assuming --primary is a dark color */
+}
+
+/* Optional: Adding some padding for better clickability */
+nav .cartAndWishlist .icon i {
+    padding: 5px;
+}
