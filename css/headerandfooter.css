@@ -1,0 +1,287 @@
+header div.header_top {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+   
+}
+header div.header_top .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 1rem;
+   
+}
+header div.header_top .header_top_left{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--secondary);
+}
+header div.header_top .header_top_left span {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+header div.header_top .header_top_right {
+    display: flex;
+    gap: 1rem;
+}
+
+header div.header_top .header_top_right .active{
+    color: var(--primary);
+    font-size: 1.2;
+    font-weight: bold;
+   
+}
+header div.header_top .header_top_right .non-active{
+    display: none;
+   
+}
+
+header div.header_top .header_top_right p.non-active{
+    display: none;
+}
+
+
+header div.header_top .header_top_right a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header div.header_top .header_top_right a:hover {
+    color:var(--primary);
+}
+
+/* General styling for the nav element */
+nav {
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text color */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow for a professional look */
+}
+
+/* Container inside nav */
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styling */
+nav .logo img {
+height: 50px;   
+}
+
+/* Navigation links styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #333; /* Dark text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 200ms ease-in-out;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: var(--primary); /* Assuming --primary is a dark color */
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjusted this value to position the line closer */
+    width: 100%;
+    height: 2px; /* Thickness of the line */
+    background-color: var(--primary); /* Line color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 300ms ease-in-out; /* Adjusted the transition speed */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Search bar styling */
+nav .search {
+    display: flex;
+    align-items: center;
+}
+
+nav .search input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 3px;
+    background-color: #fff; /* White background */
+    color: #333; /* Dark text color */
+    
+}
+
+nav .search button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #333; /* Dark background color */
+    color: white;
+    border-radius: 3px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 50ms ease-out;
+}
+
+nav .search button:hover {
+    background-color: #555; /* Slightly lighter dark color */
+}
+
+
+/* cart and wishlist icons */
+header nav .container .cartHeader {
+    display: flex;
+    align-items: center;
+}
+
+header nav .container .cartHeader .cartIcon,.wishlistIcon {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+header nav .container .cartHeader .cartIcon{
+    margin-left: 15px;
+}
+header nav .container .cartHeader  i {
+    font-size: 24px;
+
+}
+
+header nav .container .cartHeader  .countItem {
+    position: absolute;
+    top: -18px;
+    right: -10px;
+    background-color: #d01418;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+header nav .container .cartHeader .totalPrice {
+    text-align: right;
+    margin-left: 5px;
+    
+    border-radius: 5px;
+    background-color: #333;
+    padding: 0px 5px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+header nav .container .cartHeader .totalPrice::before {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: -9px; /* Adjust this value to position the arrow outside the border */
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 10px solid #333;
+    vertical-align: middle;
+}
+
+header nav .container .cartHeader .totalPrice p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+header nav .container .cartHeader .totalPrice .priceCartHead {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+}
+
+
+/* Footer */ 
+.footer {
+    background-color: #222222;
+    color: #ffffff;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    border-bottom: 1px solid #6666662a;
+    padding-bottom: 30px;
+}
+
+.footer-column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color:var(--primary);
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2.2em;
+}
+
+.footer ul li a {
+    color: #666666;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: var(--primary);
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #222222;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+

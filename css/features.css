@@ -1,0 +1,39 @@
+/* start feature */
+
+.features {
+    background-color: white;
+    padding: 50px 0;
+    
+}
+.features .container{
+    display: flex;
+    background-color: var(--white-color);
+    padding: 15px 20px;
+    border-radius: 5px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features .container  .featureItem {
+    width: 18%;
+    min-width: 220px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.features .container  .featureItem img{
+    width:50px;
+}
+
+.features .container  .featureItem h4 {
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.features .container  .featureItem p{
+    
+    font-size: 12px;
+}
+
+/* end feature */

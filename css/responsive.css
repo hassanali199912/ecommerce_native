@@ -1,0 +1,80 @@
+
+/* Media Query for Tablets */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  .nav-menu {
+    padding: 10px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .home_best-sales-card-container .home_best-sales-card {
+    width: calc(100% / 3 - 3rem);
+  }
+}
+
+/* Media Query for Mobile Phones */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .nav-menu {
+    padding: 5px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+  }
+  .home_best-sales-card-container .home_best-sales-card {
+    width: calc(100% / 2 - 3rem);
+  }
+}
+
+/* Media Query for Small Mobile Devices */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 11px;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+  .home_best-sales-card-container .home_best-sales-card {
+    width: calc(100% / 1 - 3rem);
+    margin: auto;
+  }
+}
