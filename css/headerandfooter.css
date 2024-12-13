@@ -27,6 +27,22 @@ header div.header_top .header_top_right {
     gap: 1rem;
 }
 
+header div.header_top .header_top_right .active{
+    color: var(--primary);
+    font-size: 1.2;
+    font-weight: bold;
+   
+}
+header div.header_top .header_top_right .non-active{
+    display: none;
+   
+}
+
+header div.header_top .header_top_right p.non-active{
+    display: none;
+}
+
+
 header div.header_top .header_top_right a {
     color: #fff;
     text-decoration: none;
@@ -91,6 +107,7 @@ nav .search input[type="text"] {
     border-radius: 3px;
     background-color: #fff; /* White background */
     color: #333; /* Dark text color */
+    
 }
 
 nav .search button {
@@ -108,24 +125,122 @@ nav .search button:hover {
     background-color: #555; /* Slightly lighter dark color */
 }
 
-/* Styling for cartAndWishlist container */
-nav .cartAndWishlist {
+
+/* cart and wishlist icons */
+header nav .container .cartHeader {
     display: flex;
     align-items: center;
 }
 
-nav .cartAndWishlist .icon {
-    color: #333; /* Dark text color */
-    font-size: 20px; /* Adjust the size as needed */
-    margin-left: 15px; /* Space between icons */
-    transition: color 300ms ease;
+header nav .container .cartHeader .cartIcon,.wishlistIcon {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+}
+header nav .container .cartHeader .cartIcon{
+    margin-left: 15px;
+}
+header nav .container .cartHeader  i {
+    font-size: 24px;
+
 }
 
-nav .cartAndWishlist .icon:hover {
-    color: var(--primary); /* Assuming --primary is a dark color */
+header nav .container .cartHeader  .countItem {
+    position: absolute;
+    top: -18px;
+    right: -10px;
+    background-color: #d01418;
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
 }
 
-/* Optional: Adding some padding for better clickability */
-nav .cartAndWishlist .icon i {
-    padding: 5px;
+header nav .container .cartHeader .totalPrice {
+    text-align: right;
+    margin-left: 10px;
 }
+
+header nav .container .cartHeader .totalPrice p {
+    margin: 0;
+    font-size: 14px;
+}
+
+header nav .container .cartHeader .totalPrice .priceCartHead {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px;
+    display: block;
+    text-align: center;
+}
+
+
+/* Footer */ 
+.footer {
+    background-color: #222222;
+    color: #ffffff;
+    padding-top: 30px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-top {
+    border-bottom: 1px solid #6666662a;
+    padding-bottom: 30px;
+}
+
+.footer-column {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 23%;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color:var(--primary);
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2.2em;
+}
+
+.footer ul li a {
+    color: #666666;
+    text-decoration: none;
+}
+
+.footer ul li a:hover {
+    color: var(--primary);
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #666666;
+    font-size: 16px;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #222222;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #ffffff;
+}
+
