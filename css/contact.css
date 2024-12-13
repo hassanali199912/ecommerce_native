@@ -1,0 +1,104 @@
+/* Styling for the contact container */
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 50px 0;
+    background-color: #f0f2f5; /* Light background color */
+}
+
+/* Styling for the contact info */
+.contact-info {
+    max-width: 400px;
+    margin-right: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+}
+
+.contact-info h2 {
+    margin-bottom: 20px;
+    color: var(--primary); /* Dark text color */
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+    color: #666; /* Medium text color */
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin-bottom: 10px;
+    color: #333; /* Dark text color */
+    display: flex;
+    align-items: center;
+}
+
+.contact-info ul li i {
+    margin-right: 10px;
+    color: var(--primary); /* Primary color */
+    font-size: 1.2em;
+}
+
+/* Styling for the contact form */
+.contact-form {
+    background-color: #fff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Styling for the form header */
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: var(--primary); /* Dark text color */
+}
+
+/* Styling for form groups */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Styling for labels */
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Dark text color */
+}
+
+/* Styling for input fields and textarea */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+.contact-form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color:var(--primary); /* Primary color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.contact-form .btn:hover {
+    background-color: rgb(194, 70, 4); /* Darker primary color */
+}

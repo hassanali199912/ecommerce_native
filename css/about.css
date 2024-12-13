@@ -1,0 +1,156 @@
+/* Styling for the about container */
+.about-container {
+    padding: 50px 20px;
+    background-color: #f0f2f5; /* Light background color */
+}
+
+/* Styling for the about us section */
+.about-us {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    /* align-items: center; */
+    padding:0 50px 0 0;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+    margin-bottom: 50px;
+}
+
+.about-us .about-image{
+    flex: 1;
+    margin-right: 25px;
+   
+    position: relative;
+    border-radius: 10px 0 0 10px; /* Match the container's border radius */
+    overflow: hidden; /* Ensure the image fits within the rounded corners */
+    transition: transform 300ms ease; /* Smooth transition for zoom effect */
+}
+
+.about-us .about-image img {
+   
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire area */
+    filter: brightness(0.9) contrast(1.1); /* Adjust brightness and contrast */
+    transition: transform 300ms ease; /* Smooth transition for zoom effect */
+}
+
+.about-us .about-image:hover img {
+    transform: scale(1.1); /* Zoom out effect */
+}
+
+.about-us .about-content {
+    flex: 2;
+    max-width: 600px;
+    padding: 50px 0px;
+}
+
+.about-us .about-content h2 {
+    margin-bottom: 20px;
+    color: var(--primary); /* Dark text color */
+}
+
+.about-us .about-content p {
+    margin-bottom: 20px;
+    color: #666; /* Medium text color */
+}
+
+/* Styling for the our team section */
+.our-team {
+    text-align: center;
+}
+
+.our-team h2 {
+    margin-bottom: 50px;
+    color: var(--primary); /* Dark text color */
+}
+
+.our-team .team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.our-team .team-member {
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.our-team .team-member .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+    overflow: hidden;
+    transition: transform 300ms ease;
+}
+
+.our-team .team-member .card:hover {
+    transform: translateY(-10px);
+}
+
+.our-team .team-member img {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.our-team .team-member .card-content {
+    padding: 20px;
+}
+
+.our-team .team-member h3 {
+    margin-bottom: 5px;
+    color: var(--primary); /* Dark text color */
+}
+
+.our-team .team-member p {
+    color: #666; /* Medium text color */
+}
+
+.our-team .team-member .social-icons {
+    margin-top: 10px;
+}
+
+.our-team .team-member .social-icons a {
+    color: var(--secondary); /* Dark text color */
+    margin: 0 5px;
+    font-size: 1.2em;
+    transition: color 300ms ease;
+}
+
+.our-team .team-member .social-icons a:hover {
+    color: var(--primary); /* Primary color */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+    }
+
+    .about-us .about-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+        border-radius: 10px 10px 0 0; /* Match the container's border radius */
+        width: 100%;
+    }
+    .about-us .about-image img{
+        width: 100%;
+    }
+
+    .about-us .about-content {
+        margin-left: 0;
+        padding: 20px;
+    }
+
+    .our-team .team-members {
+        flex-direction: column;
+    }
+
+    .our-team .team-member {
+        max-width: 100%;
+    }
+}

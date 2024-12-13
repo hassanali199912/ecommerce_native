@@ -1,0 +1,90 @@
+/* Styling for the register container */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f2f5; /* Light background color */
+}
+
+/* Styling for the register form */
+.register-form {
+    background-color: #fff; /* White background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Styling for the logo */
+.register-form .logo {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.register-form .logo img {
+    height: 80px;
+    margin: auto;
+}
+
+/* Styling for the form header */
+.register-form h2 {
+    margin-bottom: 20px;
+    color: var(--primary); /* Dark text color */
+}
+
+/* Styling for form groups */
+.register-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Styling for labels */
+.register-form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333; /* Dark text color */
+}
+
+/* Styling for input fields */
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Styling for the submit button */
+.register-form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color:var(--primary); /* Primary color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 300ms ease;
+}
+
+.register-form .btn:hover {
+    background-color: rgb(194, 70, 4); /* Darker primary color */
+}
+
+/* Styling for the login link */
+.register-form .login-link {
+    color: var(--primary); /* Primary color */
+    text-decoration: none;
+    transition: color 300ms ease;
+}
+
+.register-form .login-link:hover {
+    color: rgb(194, 70, 4); /* Darker primary color */
+    text-decoration: underline;
+    font-style: italic;
+}
