@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/uitility.css">
+    <title>Shop Ease | Register</title>
+  <link rel="stylesheet" href="../css/uitility.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/wishlist.css">
     <link rel="stylesheet" href="../css/headerandfooter.css">
+    <link rel="stylesheet" href="../css/register.css">
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -25,9 +24,9 @@
             <div class="container ">
                 <p class="header_top_left">Hi<span> Hassan</span> </p>
                 <ul class="header_top_right">
-                    <li class="non-active"><a href="login.html">Login</a></li>
+                    <li class="active"><a href="login.html">Login</a></li>
                     <p class="non-active"> | </p>
-                    <li class="active" ><a href="register.html">Register</a></li>
+                    <li class="non-active" ><a href="register.html">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -38,7 +37,7 @@
                     <a href="home.html"><img src="../images/logo.png" alt="logo"></a>
                 </div>
                 <ul>
-                    <li><a href="home.html">Home</a></li>
+                    <li><a   href="home.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -125,33 +124,41 @@
 
 
 
-    <div class="login-container">
-        <form class="login-form" action="./home.html" method="post">
+
+    <div class="register-container">
+        <form class="register-form" action="./login.html" method="post">
             <div class="logo">
                 <img src="../images/logo.png" alt="Website Logo">
             </div>
-            <h2>Login</h2>
+            <h2>Register</h2>
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn">Login</button>
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
             </div>
             <div class="form-group">
-                <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+                <button type="submit" class="btn">Register</button>
             </div>
             <div class="form-group">
-                <p>Not registered? <a href="/register" class="register-link">Register</a></p>
+                <p>Already have an account? <a href="/login" class="login-link">Login</a></p>
             </div>
         </form>
     </div>
 
 
+
+    
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
@@ -206,7 +213,7 @@
         </div>
     </footer>
 
-    <script src="login.js"></script>
+    <script src="../js/register.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/main.js"></script>
 </body>

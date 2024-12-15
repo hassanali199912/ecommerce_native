@@ -4,13 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="../css/uitility.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/wishlist.css">
+    <link rel="stylesheet" href="../css/uitility.css">
     <link rel="stylesheet" href="../css/headerandfooter.css">
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -25,9 +23,9 @@
             <div class="container ">
                 <p class="header_top_left">Hi<span> Hassan</span> </p>
                 <ul class="header_top_right">
-                    <li class="non-active"><a href="login.html">Login</a></li>
-                    <p class="non-active"> | </p>
-                    <li class="active" ><a href="register.html">Register</a></li>
+                    <li ><a href="login.html">Login</a></li>
+                    <p > | </p>
+                    <li ><a href="register.html">Register</a></li>
                 </ul>
             </div>
         </div>
@@ -41,7 +39,7 @@
                     <li><a href="home.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a  class="active" href="contact.html">Contact</a></li>
                 </ul>
                 <div class="search">
                     <input type="text" placeholder="Search">
@@ -121,37 +119,36 @@
 </div>
     <!-- -------------------------------------------------------End of wishlist-------------------------------------------------------- -->
 
-
-
-
-
-    <div class="login-container">
-        <form class="login-form" action="./home.html" method="post">
-            <div class="logo">
-                <img src="../images/logo.png" alt="Website Logo">
-            </div>
-            <h2>Login</h2>
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Feel free to reach out to us through any of the following methods:</p>
+            <ul>
+                <li><i class="fas fa-map-marker-alt"></i> 1234 Street Name, City, Country</li>
+                <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                <li><i class="fas fa-envelope"></i> support@example.com</li>
+            </ul>
+        </div>
+        <form class="contact-form" action="/submit-contact" method="post">
+            <h2>Contact Us</h2>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
             </div>
             <div class="form-group">
-                <button type="submit" class="btn">Login</button>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
             </div>
             <div class="form-group">
-                <a href="/forgot-password" class="forgot-password">Forgot Password?</a>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
             </div>
             <div class="form-group">
-                <p>Not registered? <a href="/register" class="register-link">Register</a></p>
+                <button type="submit" class="btn">Send Message</button>
             </div>
         </form>
     </div>
-
-
+ 
     <footer class="footer">
         <div class="footer-top">
             <div class="container">
@@ -205,8 +202,6 @@
             </div>
         </div>
     </footer>
-
-    <script src="login.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/main.js"></script>
 </body>

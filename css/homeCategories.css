@@ -1,10 +1,8 @@
-.home_cat .container{
-    padding: 0 !important;
-}
 .homeCategories {
 display: flex;
 gap: 5px;
 width: 100%;
+
 }
 .homeCategories  .catContainer {
     display: flex;
@@ -12,9 +10,9 @@ width: 100%;
     justify-content: center;
     padding: 8% 10% 0 3%;
     text-transform: capitalize;
-}
-.homeCategories div {
-    /* padding: 0 2rem; */
+    
+   
+
 }
 
 .homeCategories  .catContainer a {
