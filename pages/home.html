@@ -10,7 +10,9 @@
     <link rel="stylesheet" href="../css/homeCategories.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/wishlist.css">
-    
+    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <link rel="stylesheet" href="../css/topSale.css">
+    <link rel="stylesheet" href="../css/swiper.css">
 
     <link rel="stylesheet" href="../css/uitility.css">
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
@@ -40,7 +42,7 @@
                     <a href="home.html"><img src="../images/logo.png" alt="logo"></a>
                 </div>
                 <ul>
-                    <li><a  class="active" href="home.html">Home</a></li>
+                    <li><a class="active" href="home.html">Home</a></li>
                     <li><a href="shop.html">Shop</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -55,7 +57,7 @@
                         <i class="fa-solid fa-heart"></i>
                         <span class="countItem">0</span>
                     </div>
-                    <div onclick="openAndCloseCartAndWishList ('cart')" class="cartIcon" >
+                    <div onclick="openAndCloseCartAndWishList ('cart')" class="cartIcon">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <span class="countItem">0</span>
                     </div>
@@ -70,73 +72,123 @@
     </header>
 
 
-  <!-- --------------------------------------------------------inside the cart -------------------------------------------------------- -->
-  <div class="cart">
-    <span onclick="openAndCloseCartAndWishList ('cart')" class="bgOverLay"></span>
-    <div class="topCart">
-        <h3>My Cart <span class="countItemsInsideCart">(0 Item in the Cart)</span></h3>
-        <span class="closeCart" onclick="openAndCloseCartAndWishList ('cart')"><i class="fa-regular fa-circle-xmark"></i></span>
-    </div>
+    <!-- --------------------------------------------------------inside the cart -------------------------------------------------------- -->
+    <div class="cart">
+        <span onclick="openAndCloseCartAndWishList ('cart')" class="bgOverLay"></span>
+        <div class="topCart">
+            <h3>My Cart <span class="countItemsInsideCart">(0 Item in the Cart)</span></h3>
+            <span class="closeCart" onclick="openAndCloseCartAndWishList ('cart')"><i
+                    class="fa-regular fa-circle-xmark"></i></span>
+        </div>
 
-    <!-- --------------------------------------------------------items inside the cart-------------------------------------------------------- -->
-    <div class="itemsInCart">
-       
-        <div class="emptyCart">
-            <img src="../images/empty-shopping-cart.jpg" alt="emptyCart" style="width: 100%;height: 100%; margin-top: 15%;">
+        <!-- --------------------------------------------------------items inside the cart-------------------------------------------------------- -->
+        <div class="itemsInCart">
+
+            <div class="emptyCart">
+                <img src="../images/empty-shopping-cart.jpg" alt="emptyCart"
+                    style="width: 100%;height: 100%; margin-top: 15%;">
             </div>
 
             <!-- product in click from json by ID -->
-</div> 
-    <!-- --------------------------------------------------------bottom part inside the cart-------------------------------------------------------- -->
-    <div class="bottomCart">
-        <div class="total">
-            <p>Cart subtotal</p>
-            <p class="totalPriceOfCart">$0</p>
         </div>
-        <div class="cartButton">
-            <a href="#" class="catBtn">Proceed to checkout</a>
-             <button class="catBtn bgTrans" >shop Now</button>
+        <!-- --------------------------------------------------------bottom part inside the cart-------------------------------------------------------- -->
+        <div class="bottomCart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="totalPriceOfCart">$0</p>
+            </div>
+            <div class="cartButton">
+                <a href="#" class="catBtn">Proceed to checkout</a>
+                <button class="catBtn bgTrans">shop Now</button>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- --------------------------------------------------------End of Cart -------------------------------------------------------- -->
+    <!-- --------------------------------------------------------End of Cart -------------------------------------------------------- -->
 
-<!-- --------------------------------------------------------inside the wishlist -------------------------------------------------------- -->
-<div class="wishlist ">
-    <span onclick="openAndCloseCartAndWishList ('wishlist')" class="bgOverLay"></span>
-    <div class="topwishlist">
-        <h3>My wishlist <span class="countItemsInsideCart">(0 Item in the wishlist)</span></h3>
-        <span class="closewishlist" onclick="openAndCloseCartAndWishList ('wishlist')"><i class="fa-regular fa-circle-xmark"></i></span>
-    </div>
+    <!-- --------------------------------------------------------inside the wishlist -------------------------------------------------------- -->
+    <div class="wishlist ">
+        <span onclick="openAndCloseCartAndWishList ('wishlist')" class="bgOverLay"></span>
+        <div class="topwishlist">
+            <h3>My wishlist <span class="countItemsInsideCart">(0 Item in the wishlist)</span></h3>
+            <span class="closewishlist" onclick="openAndCloseCartAndWishList ('wishlist')"><i
+                    class="fa-regular fa-circle-xmark"></i></span>
+        </div>
 
-    <!-- --------------------------------------------------------items inside the wishlist-------------------------------------------------------- -->
-    <div class="itemsInwishlist">
-       
-        <div class="emptywishlist">
-            <img src="../images/empty-shopping-cart.jpg" alt="emptywishlist" style="width: 100%;height: 100%; margin-top: 15%;">
+        <!-- --------------------------------------------------------items inside the wishlist-------------------------------------------------------- -->
+        <div class="itemsInwishlist">
+
+            <div class="emptywishlist">
+                <img src="../images/empty-shopping-cart.jpg" alt="emptywishlist"
+                    style="width: 100%;height: 100%; margin-top: 15%;">
             </div>
 
             <!-- product in click from json by ID -->
-</div> 
-   
-</div>
+        </div>
+
+    </div>
     <!-- -------------------------------------------------------End of wishlist-------------------------------------------------------- -->
 
+    <!-- ------------------------------------------------------- start top swiper -------------------------------------------------------- -->
 
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-02.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-03.jpg" alt="">
+                </div>
+           
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
 
+    <!-- -------------------------------------------------------End of swiper-------------------------------------------------------- -->
+    
+    <!-- -------------------------------------------------------End of Top Sales-------------------------------------------------------- -->
+    <section class="allProducts">
+       <div class="container" style="margin-top: 50px;">
+        <h2  style="text-align: center;margin-block:auto;  font-size: 2em; color: #333;">Top Sales</h2>
+      
+          <ul class="topSaleFilteration">
+            <li class="filterItem active" onclick="FilterProducts('all')">All</li>
+            <li class="filterItem " onclick="FilterProducts('electronics')">electronics</li>
+            <li class="filterItem" onclick="FilterProducts('men')">men's clothing</li>
+            <li class="filterItem" onclick="FilterProducts('women')">women's clothing</li>
+            <li class="filterItem"  onclick="FilterProducts('jewelery')">jewelery</li>
+          </ul>  
+     
+       </div>
+        <div class="container">
+
+            <div id="productsDev" class="productsDev">
+                <!-- product in click from json by ID -->
+               
+
+            </div>
+         </div>
+    </section>
+    <!-- -------------------------------------------------------End of Top Sales-------------------------------------------------------- -->
 
 
     <section class="homeCategories">
         <div class="leftCat ">
-           <div class="container catContainer">
-            <h2 class="catName">
-                electronics
-            </h2>
-            <span class="catItemsCount">375 Item</span>
-           
-            <a href="#">SHOP NOW</a>
-           </div>
+            <div class="container catContainer">
+                <h2 class="catName">
+                    electronics
+                </h2>
+                <span class="catItemsCount">375 Item</span>
+
+                <a href="#">SHOP NOW</a>
+            </div>
         </div>
         <div class="midCats">
             <div class="midCat-top ">
@@ -145,9 +197,9 @@
                         men's clothing
                     </h2>
                     <span class="catItemsCount">375 Item</span>
-                    
+
                     <a href="#">SHOP NOW</a>
-                   </div>
+                </div>
             </div>
             <div class="midCat-bottom ">
                 <div class="container catContainer">
@@ -155,9 +207,9 @@
                         women's clothing
                     </h2>
                     <span class="catItemsCount">375 Item</span>
-                    
+
                     <a href="#">SHOP NOW</a>
-                   </div>
+                </div>
             </div>
         </div>
         <div class="rightCat ">
@@ -166,9 +218,9 @@
                     jewelery
                 </h2>
                 <span class="catItemsCount">375 Item</span>
-              
+
                 <a href="#">SHOP NOW</a>
-               </div>
+            </div>
         </div>
 
 
@@ -267,9 +319,11 @@
             </div>
         </div>
     </footer>
-
+    <script src="../js/TopSale.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/swiper.js"></script>
+    
 </body>
 
 </html>
