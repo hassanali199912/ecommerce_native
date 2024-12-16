@@ -1,11 +1,9 @@
-//  open the Cart Page 
+//  open the Cart Page
 
-
-var test ={
-    cart:document.querySelector('.cart'),
-    wishlist : document.querySelector('.wishlist'),
+var cartAndWishlist = {
+  cart: document.querySelector(".cart"),
+  wishlist: document.querySelector(".wishlist"),
 };
-function openAndCloseCartAndWishList (hamada) {
-   test[hamada].classList.toggle("active");
-
+function openAndCloseCartAndWishList(element) {
+  cartAndWishlist[element].classList.toggle("active");
 }

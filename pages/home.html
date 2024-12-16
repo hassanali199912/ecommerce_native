@@ -7,13 +7,13 @@
     <title>ShopEase</title>
     <link rel="stylesheet" href="../css/headerandfooter.css">
     <link rel="stylesheet" href="../css/features.css">
-    <link rel="stylesheet" href="../css/homeCategories.css">
-    <link rel="stylesheet" href="../css/cart.css">
-    <link rel="stylesheet" href="../css/wishlist.css">
-    <!-- <link rel="stylesheet" href="../css/swiper-bundle.min.css"> -->
+    <!-- <link rel="stylesheet" href="../css/homeCategories.css"> -->
+    <link rel="stylesheet" href="../css/newHomeCat.css">
     <link rel="stylesheet" href="../css/topSale.css">
     <link rel="stylesheet" href="../css/swiper.css">
 
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
     <link rel="stylesheet" href="../css/uitility.css">
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -143,7 +143,7 @@
                 <div class="swiper-slide">
                     <img src="../images/TopHomeSwiper/slider-03.jpg" alt="">
                 </div>
-           
+
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-next"></div>
@@ -152,82 +152,81 @@
     </section>
 
     <!-- -------------------------------------------------------End of swiper-------------------------------------------------------- -->
-    
+
     <!-- -------------------------------------------------------End of Top Sales-------------------------------------------------------- -->
     <section class="allProducts">
-       <div class="container" style="margin-top: 50px;">
-        <h2  style="text-align: center;margin-block:auto;  font-size: 2em; color: #333;">Top Sales</h2>
-      
-          <ul class="topSaleFilteration">
-            <li class="filterItem active" onclick="FilterProducts('all')">All</li>
-            <li class="filterItem " onclick="FilterProducts('electronics')">electronics</li>
-            <li class="filterItem" onclick="FilterProducts('men')">men's clothing</li>
-            <li class="filterItem" onclick="FilterProducts('women')">women's clothing</li>
-            <li class="filterItem"  onclick="FilterProducts('jewelery')">jewelery</li>
-          </ul>  
-     
-       </div>
         <div class="container">
-
+            <h2 class="section-title">Top Sales</h2>
+            <ul class="topSaleFilteration">
+                <li class="filterItem active" onclick="FilterProducts('all', event)">All</li>
+                <li class="filterItem" onclick="FilterProducts('electronics', event)">electronics</li>
+                <li class="filterItem" onclick="FilterProducts('men', event)">men's clothing</li>
+                <li class="filterItem" onclick="FilterProducts('women', event)">women's clothing</li>
+                <li class="filterItem" onclick="FilterProducts('jewelery', event)">jewelery</li>
+            </ul>
+        </div>
+        <div class="container">
             <div id="productsDev" class="productsDev">
                 <!-- product in click from json by ID -->
-               
-
             </div>
-         </div>
+        </div>
     </section>
     <!-- -------------------------------------------------------End of Top Sales-------------------------------------------------------- -->
 
+    <!-- -------------------------------------------------------start home category ----------------------------------------- -->
 
-    <section class="homeCategories">
-        <div class="leftCat ">
-            <div class="container catContainer">
-                <h2 class="catName">
-                    electronics
-                </h2>
-                <span class="catItemsCount">375 Item</span>
+    <div class="container">
+        <h2 class="section-title" style="margin-top: 2rem;">Shop by Category</h2>
+    </div>
 
-                <a href="#">SHOP NOW</a>
-            </div>
-        </div>
-        <div class="midCats">
-            <div class="midCat-top ">
-                <div class="container catContainer">
-                    <h2 class="catName">
-                        men's clothing
-                    </h2>
-                    <span class="catItemsCount">375 Item</span>
-
-                    <a href="#">SHOP NOW</a>
+    <section class="homeCategories container">
+ 
+        <div class="category electronicsCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/electronics.png" alt="Icon">
                 </div>
             </div>
-            <div class="midCat-bottom ">
-                <div class="container catContainer">
-                    <h2 class="catName">
-                        women's clothing
-                    </h2>
-                    <span class="catItemsCount">375 Item</span>
-
-                    <a href="#">SHOP NOW</a>
+            <div class="card-category">
+                <h2>electronics</h2>
+            </div>
+        </div>
+        <div class="category menCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/men.png" alt="Icon">
                 </div>
             </div>
-        </div>
-        <div class="rightCat ">
-            <div class="container catContainer">
-                <h2 class="catName">
-                    jewelery
-                </h2>
-                <span class="catItemsCount">375 Item</span>
-
-                <a href="#">SHOP NOW</a>
+            <div class="card-category">
+                <h2>men's clothing</h2>
             </div>
         </div>
-
-
-
-
+        <div class="category womenCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/women.png" alt="Icon">
+                </div>
+            </div>
+            <div class="card-category">
+                <h2>women's clothing</h2>
+            </div>
+        </div>
+        
+        <div class="category jeweleryCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/jewlarey.png" alt="Icon">
+                </div>
+            </div>
+            <div class="card-category">
+                <h2>jewelery</h2>
+            </div>
+        </div>
     </section>
 
+    <!-- -------------------------------------------------------End of home Category ------------------------------------------ -->
+
+    <!-- -------------------------------------------------------start of features section -------------------------------------------- -->
 
 
     <section class="features">
@@ -319,11 +318,12 @@
             </div>
         </div>
     </footer>
+
     <script src="../js/TopSale.js"></script>
     <script src="../js/cart.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/swiper.js"></script>
-    
+
 </body>
 
 </html>
