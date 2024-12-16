@@ -38,7 +38,7 @@
     height: 100%;
     width: calc(100vw - 438px);
     transition: 400ms ease;
-    background-color: var(--color-background-dark);
+    background-color:#00000069;
 }
 .wishlist.active .bgOverLay {
     right: 0;
