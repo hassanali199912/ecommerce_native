@@ -1,0 +1,32 @@
+
+
+.brodcump {
+    height: 20vh;
+    width: 100%;
+    background-color: var(--danger);
+    color: var(--light-gray);
+    font-size: 1.6rem;
+}
+
+.brodcump ul {
+    display: flex;
+    gap: 1rem;
+    font-size: 1rem;
+
+}
+
+.brodcump ul li {
+    padding: 0;
+}
+
+.brodcump ul li:not(:last-child)::after {
+    content: " / ";
+}
+
+.brodcump ul li.active {
+    opacity: 0.9;
+}
+
+.brodcump ul li a {
+    color: var(--light-gray);
+}

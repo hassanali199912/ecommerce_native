@@ -4,15 +4,15 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f2f5; /* Light background color */
+    background-color: var(--color-background); /* Light background color */
 }
 
 /* Styling for the login form */
 .login-form {
-    background-color: #fff; /* White background */
+    background-color: var(--color-background-light); /* White background */
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a professional look */
+    box-shadow: 0 4px 15px var(--color-card-shadow); /* Subtle shadow for a professional look */
     width: 100%;
     max-width: 400px;
     box-sizing: border-box;
@@ -21,8 +21,7 @@
 
 /* Styling for the logo */
 .login-form .logo {
-    
-  width: 100%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -34,7 +33,7 @@
 /* Styling for the form header */
 .login-form h2 {
     margin-bottom: 20px;
-    color:var(--primary); /* Dark text color */
+    color: var(--color-primary); /* Dark text color */
 }
 
 /* Styling for form groups */
@@ -47,7 +46,7 @@
 .login-form label {
     display: block;
     margin-bottom: 5px;
-    color: #333; /* Dark text color */
+    color: var(--color-text); /* Dark text color */
 }
 
 /* Styling for input fields */
@@ -55,7 +54,7 @@
 .login-form input[type="password"] {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc; /* Light border */
+    border: 1px solid var(--color-border); /* Light border */
     border-radius: 5px;
     box-sizing: border-box;
 }
@@ -64,7 +63,7 @@
 .login-form .btn {
     width: 100%;
     padding: 10px;
-    background-color: var(--primary); /* Primary color */
+    background-color: var(--color-primary); /* Primary color */
     color: #fff; /* White text color */
     border: none;
     border-radius: 5px;
@@ -73,7 +72,7 @@
 }
 
 .login-form .btn:hover {
-    background-color: rgb(194, 70, 4); /* Darker primary color */
+    background-color: var(--color-primary-hover); /* Darker primary color */
 }
 
 /* Styling for the forgot password link */
@@ -81,26 +80,26 @@
     display: block;
     text-align: center;
     margin-top: 10px;
-    color: var(--primary); /* Primary color */
+    color: var(--color-link); /* Primary color */
     text-decoration: none;
     transition: color 300ms ease;
 }
 
 .login-form .forgot-password:hover {
-    color: rgb(194, 70, 4); /* Darker primary color */
+    color: var(--color-link-hover); /* Darker primary color */
     text-decoration: underline;
     font-style: italic;
 }
 
 /* Styling for the register link */
 .login-form .register-link {
-    color: var(--primary); /* Primary color */
+    color: var(--color-link); /* Primary color */
     text-decoration: none;
     transition: color 300ms ease;
 }
 
 .login-form .register-link:hover {
-    color: rgb(194, 70, 4); /* Darker primary color */
+    color: var(--color-link-hover); /* Darker primary color */
     text-decoration: underline;
     font-style: italic;
 }
