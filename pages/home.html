@@ -4,260 +4,258 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>ShopEase</title>
+    <link rel="stylesheet" href="../css/uitility.css">
+    <link rel="stylesheet" href="../css/headerandfooter.css">
+    <link rel="stylesheet" href="../css/features.css">
+    <!-- <link rel="stylesheet" href="../css/homeCategories.css"> -->
+    <link rel="stylesheet" href="../css/newHomeCat.css">
+    <link rel="stylesheet" href="../css/topSale.css">
+    <link rel="stylesheet" href="../css/swiper.css">
+
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/wishlist.css">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/uitility.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/headerandfooter.css">
-    <link rel="stylesheet" href="../css/features.css">
-    <link rel="stylesheet" href="../css/homeCategories.css">
-    <link rel="stylesheet" href="../css/swiper.css">
-    <link rel="stylesheet" href="../css/cards.css">
-    <link rel="stylesheet" href="../css/responsive.css">
+
 </head>
 
 <body>
 
-    <header id="header_component"></header>
+    <header>
+        <div class="header_top">
+            <p class="header_top_left">
+                
+            </p>
+        </div>
 
-    <section class="home_swiper">
-        <div class="container rid-1 shadow">
-            <div class="home_swiper-swipper ">
-                <div class="swiper-wrapper ">
-                    <div class="innner-swiper active">
-                        <div class="innner-swiper-item">
-                            <h2 class="innner-swiper-item-h2">Electronics</h2>
-                            <img class="innner-swiper-item-img" src="../images/swiper/electronic.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="innner-swiper ">
-                        <div class="innner-swiper-item slide2">
-                            <h2 class="innner-swiper-item-h2">Juarries</h2>
-                            <img class="innner-swiper-item-img" src="../images/swiper/jewelery.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="innner-swiper ">
-                        <div class="innner-swiper-item slide2">
-                            <h2 class="innner-swiper-item-h2">Men's Clothing</h2>
-                            <img class="innner-swiper-item-img" src="../images/swiper/men's clothing.jpeg" alt="">
-                        </div>
-                    </div>
-                    <div class="innner-swiper ">
-                        <div class="innner-swiper-item slide2">
-                            <h2 class="innner-swiper-item-h2">Women's Clothing</h2>
-                            <img class="innner-swiper-item-img" src="../images/swiper/women's clothing.jpg" alt="">
-                        </div>
-                    </div>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <a href="home.html"><img src="../images/logo.png" alt="logo"></a>
                 </div>
-                <div class="swiper-pagination">
-                    <button onclick="getSlider(0)" class="swiper-pagination-bullet">
-                        1
-                    </button>
-                    <button onclick="getSlider(1)" class="swiper-pagination-bullet">
-                        2
-                    </button>
-                    <button onclick="getSlider(2)" class="swiper-pagination-bullet">
-                        3
-                    </button>
-                    <button onclick="getSlider(3)" class="swiper-pagination-bullet">
-                        4
-                    </button>
+                <ul>
+                    <li><a class="active" href="home.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <button>Search</button>
+                </div>
+
+                <div class="cartHeader">
+                    <div class="wishlistIcon" onclick="openAndCloseCartAndWishList ('wishlist')">
+                        <i class="fa-solid fa-heart"></i>
+                        <span class="countItemWishList">0</span>
+                    </div>
+                    <div onclick="openAndCloseCartAndWishList ('cart')" class="cartIcon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span class="countItem">0</span>
+                    </div>
+                    <!-- Price beside the Cart in Header -->
+                    <div class="totalPrice">
+                        <p class="priceCartHead">$0</p>
+                    </div>
                 </div>
             </div>
+
+        </nav>
+    </header>
+
+
+    <!-- --------------------------------------------------------inside the cart -------------------------------------------------------- -->
+    <div class="cart">
+        <span onclick="openAndCloseCartAndWishList ('cart')" class="bgOverLay"></span>
+        <div class="topCart">
+            <h3>My Cart <span class="countItemsInsideCart">(0 Item in the Cart)</span></h3>
+            <span class="closeCart" onclick="openAndCloseCartAndWishList ('cart')"><i
+                    class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <!-- --------------------------------------------------------items inside the cart-------------------------------------------------------- -->
+        <div class="itemsInCart">
+
+            <div class="emptyCart">
+                <img src="../images/empty-shopping-cart.jpg" alt="emptyCart"
+                    style="width: 100%;height: 100%; margin-top: 15%;">
+            </div>
+
+            <!-- product in click from json by ID -->
+        </div>
+        <!-- --------------------------------------------------------bottom part inside the cart-------------------------------------------------------- -->
+        <div class="bottomCart">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="totalPriceOfCart">$0</p>
+            </div>
+            <div class="cartButton">
+                <a href="#" class="catBtn">Proceed to checkout</a>
+                <button class="catBtn bgTrans">shop Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------------------------------------------------End of Cart -------------------------------------------------------- -->
+
+    <!-- --------------------------------------------------------inside the wishlist -------------------------------------------------------- -->
+    <div class="wishlist ">
+        <span onclick="openAndCloseCartAndWishList ('wishlist')" class="bgOverLay"></span>
+        <div class="topwishlist">
+            <h3>My wishlist <span class="countItemsInsideWishList">(0 Item in the wishlist)</span></h3>
+            <span class="closewishlist" onclick="openAndCloseCartAndWishList ('wishlist')"><i
+                    class="fa-regular fa-circle-xmark"></i></span>
+        </div>
+
+        <!-- --------------------------------------------------------items inside the wishlist-------------------------------------------------------- -->
+        <div class="itemsInwishlist">
+
+            <div class="emptywishlist">
+                <img src="../images/empty-shopping-cart.jpg" alt="emptywishlist"
+                    style="width: 100%;height: 100%; margin-top: 15%;">
+            </div>
+
+            <!-- product in click from json by ID -->
+        </div>
+
+        <!-- bottom part in wish list -->
+        <div class="bottomWishList">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="totalPriceOfWishList">$0</p>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------------------------------------------End of wishlist-------------------------------------------------------- -->
+
+    <!-- ------------------------------------------------------- start top swiper -------------------------------------------------------- -->
+
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-02.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-03.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-04.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-05.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-6.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-07.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-08.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-09.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../images/TopHomeSwiper/slider-10.jpg" alt="">
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
     </section>
 
-    <section class="home_cat">
-        <div class="homeCategories  rid-1 shadow">
-            <div class="leftCat ">
-                <div class="container catContainer">
-                    <h2 class="catName">
-                        electronics
-                    </h2>
-                    <span class="catItemsCount">375 Item</span>
+    <!-- -------------------------------------------------------End of swiper-------------------------------------------------------- -->
 
-                    <a href="#">SHOP NOW</a>
-                </div>
-            </div>
-            <div class="midCats">
-                <div class="midCat-top ">
-                    <div class="container catContainer">
-                        <h2 class="catName">
-                            men's clothing
-                        </h2>
-                        <span class="catItemsCount">375 Item</span>
-
-                        <a href="#">SHOP NOW</a>
-                    </div>
-                </div>
-                <div class="midCat-bottom ">
-                    <div class="container catContainer">
-                        <h2 class="catName">
-                            women's clothing
-                        </h2>
-                        <span class="catItemsCount">375 Item</span>
-
-                        <a href="#">SHOP NOW</a>
-                    </div>
-                </div>
-            </div>
-            <div class="rightCat ">
-                <div class="container catContainer">
-                    <h2 class="catName">
-                        jewelery
-                    </h2>
-                    <span class="catItemsCount">375 Item</span>
-
-                    <a href="#">SHOP NOW</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <section class="home_best-sales">
+    <!-- -------------------------------------------------------start of Top Sales-------------------------------------------------------- -->
+    <section class="allProducts">
         <div class="container">
-            <div class="home_best-sales-top">
-                <h2 class="home_best-sales-h2 pt-1 pb-1">Best Sales</h2>
-            </div>
-            <div class="home_best-sales-card-container">
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
+            <h2 class="section-title">Top Sales</h2>
+            <ul class="topSaleFilteration">
+                <li class="filterItem active" onclick="FilterProducts('all', event)">All</li>
+                <li class="filterItem" onclick="FilterProducts('electronics', event)">electronics</li>
+                <li class="filterItem" onclick="FilterProducts('men', event)">men's clothing</li>
+                <li class="filterItem" onclick="FilterProducts('women', event)">women's clothing</li>
+                <li class="filterItem" onclick="FilterProducts('jewelery', event)">jewelery</li>
+            </ul>
+        </div>
+        <div class="container">
+            <div id="productsDev" class="productsDev">
+                <div id="loader" class="text-center my-3" style="display: none;">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden"> </span>
                     </div>
                 </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-                <div class="home_best-sales-card card">
-                    <div class="home_best-sales-card-img">
-                        <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg" alt="">
-                    </div>
-                    <div class="home_best-sales-card-content">
-                        <h6><a href="#">Buttons tweed blazer</a></h6>
-                        <div class="rating">
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </div>
-                        <div class="product__price">$ 59.0</div>
-                    </div>
-                </div>
-
+                <!-- product in click from json by ID -->
             </div>
         </div>
     </section>
+    <!-- -------------------------------------------------------End of Top Sales-------------------------------------------------------- -->
+
+    <!-- -------------------------------------------------------start home category ----------------------------------------- -->
+
+    <div class="container">
+        <h2 class="section-title" style="margin-top: 2rem;">Shop by Category</h2>
+    </div>
+
+    <section class="homeCategories container">
+
+        <div class="category electronicsCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/electronics.png" alt="Icon">
+                </div>
+            </div>
+            <div class="card-category">
+                <h2>electronics</h2>
+            </div>
+        </div>
+        <div class="category menCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/men.png" alt="Icon">
+                </div>
+            </div>
+            <div class="card-category">
+                <h2>men's clothing</h2>
+            </div>
+        </div>
+        <div class="category womenCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/women.png" alt="Icon">
+                </div>
+            </div>
+            <div class="card-category">
+                <h2>women's clothing</h2>
+            </div>
+        </div>
+
+        <div class="category jeweleryCategory">
+            <div class="card">
+                <div class="card-icon">
+                    <img src="../images/newCategories/jewlarey.png" alt="Icon">
+                </div>
+            </div>
+            <div class="card-category">
+                <h2>jewelery</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------End of home Category ------------------------------------------ -->
+
+    <!-- -------------------------------------------------------start of features section -------------------------------------------- -->
+
 
     <section class="features">
         <div class="container">
@@ -294,12 +292,66 @@
 
         </div>
     </section>
-    <footer class="footer" id="footer_component">
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="footer-column">
+                    <!-- قسم عن ShopEase -->
+                    <div class="footer-section">
+                        <h5>About ShopEase</h5>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press Releases</a></li>
+                            <li><a href="#">ShopEase Cares</a></li>
+                        </ul>
+                    </div>
+                    <!-- قسم دعم العملاء -->
+                    <div class="footer-section">
+                        <h5>Customer Service</h5>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Returns & Refunds</a></li>
+                            <li><a href="#">Shipping Info</a></li>
+                            <li><a href="#">Track Order</a></li>
+                        </ul>
+                    </div>
+                    <!-- قسم السياسة والشروط -->
+                    <div class="footer-section">
+                        <h5>Policies</h5>
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Cookies Policy</a></li>
+                            <li><a href="#">Security</a></li>
+                        </ul>
+                    </div>
+                    <!-- قسم التواصل الاجتماعي -->
+                    <div class="footer-section">
+                        <h5>Connect With Us</h5>
+                        <ul class="social-links">
+                            <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                            <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                            <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                            <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 ShopEase. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
-    <!-- <script src="../js/components.js"></script> -->
     <script src="../js/main.js"></script>
-    <script src="../js//swiper.js"></script>
+    <script src="../js/TopSale.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/swiper.js"></script>
+
 </body>
 
 </html>

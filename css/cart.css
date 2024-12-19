@@ -1,0 +1,486 @@
+
+.cart {
+    position: fixed;
+    top: 0px;
+    right: -440px;
+    bottom: 0px;
+    background: var(--color-background-light);
+    z-index: 1500;
+    padding: 28px;
+    border-left: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 440px;
+    transition: 550ms ease;
+}
+
+.cart.active {
+    right: 0px;
+}
+
+.cart .topCart {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cart .topCart .closeCart i {
+    font-size: 35px;
+    cursor: pointer;
+    color: var(--color-error);
+}
+
+.cart .bgOverLay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: calc(100% - 440px);
+    transition: 400ms ease;
+    background-color: #00000069;
+    z-index: 1400;
+}
+
+.cart.active .bgOverLay {
+    left: 0;
+}
+
+.cart .topCart h3 {
+    font-size: 18px;
+    color: var(--color-text);
+}
+
+.cart .topCart h3 span {
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: normal;
+}
+
+.cart .itemsInCart {
+    padding: 20px 5px;
+    border-block: 1px solid var(--color-border);
+    margin-block: 20px;
+    height: 100%;
+    height: 98%;
+    overflow-y: auto;
+}
+
+.cart .cartItems {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+
+.cart .cartItems:last-child {
+    margin-bottom: 0px;
+}
+
+.cart .cartItems .productTitle {
+   cursor: pointer;
+}
+.cart .cartItems .productTitle:hover {
+    color: var(--color-primary);
+}
+.cart .cartItems img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.cart .cartItems img:hover {
+    transform: scale(1.1);
+}
+
+.cart .cartItems h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.cart .cartItems .deletItemIcon {
+    outline: none;
+    border: none;
+}
+
+.cart .cartItems .deletItemIcon i {
+    font-size: 35px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+.cart .cartItems .deletItemIcon i:hover {
+    color: var(--color-error);
+    transform: scale(1.25);
+}
+
+.cart .bottomCart .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.cart .bottomCart .total .totalPriceOfCart {
+    color: var(--color-primary);
+}
+
+.cart .cartButton {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart .bottomCart .cartButton .catBtn {
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    color: var(--color-background-light);
+    padding: 15px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    background: var(--color-primary);
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+.cart .bottomCart .cartButton .catBtn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-background-light);
+}
+
+.cart .bottomCart .cartButton .bgTrans {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.cart .bottomCart .cartButton .bgTrans:hover {
+    background: var(--color-primary);
+    color: var(--color-background-light);
+}
+
+.quantityContainer {
+    display: flex;
+    align-items: center;
+}
+
+.quantityBtn {
+    background-color: var(--color-background-dark);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantityBtn:hover {
+    background-color: var(--color-background);
+}
+
+.quantityBtn:active {
+    transform: scale(0.95);
+}
+
+.quantityContainer span {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--color-text);
+    margin: 0 10px;
+}
+
+
+/* inside Wish List  */
+
+.addToCardInWishList {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.addToCardInWishList:hover {
+    background-color: var(--color-primary-hover);
+    color: var(--color-background-light);
+}
+
+.wishlist {
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    bottom: 0px;
+    background: var(--color-background-light);
+    z-index: 2000;
+    padding: 28px;
+    border-right: 1px solid var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30%;
+    transition: 550ms ease;
+}
+
+.wishlist.active {
+    left: 0px;
+}
+
+.wishlist .topwishlist {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wishlist .topwishlist .closewishlist i {
+    font-size: 35px;
+    cursor: pointer;
+    color: var(--color-error);
+}
+
+.wishlist .bgOverLay {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    height: 100%;
+    width: 70%;
+    transition: 400ms ease;
+    background-color: #00000069;
+    z-index: 1200;
+
+}
+
+.wishlist.active .bgOverLay {
+    right: 0;
+    z-index: 1200;
+}
+
+.wishlist .wishlistItems .productTitle{
+    cursor: pointer;
+}
+.wishlist .wishlistItems .productTitle:hover{
+    color: var(--color-primary);
+}
+
+.wishlist .topwishlist h3 {
+    font-size: 18px;
+    color: var(--color-text);
+   
+}
+
+ 
+
+.wishlist .topwishlist h3 span {
+    font-size: 14px;
+    color: var(--color-text-light);
+    font-weight: normal;
+}
+
+.wishlist .itemsInwishlist {
+    padding: 20px 5px;
+    border-block: 1px solid var(--color-border);
+    margin-block: 20px;
+    height: 100%;
+    height: 98%;
+    overflow-y: auto;
+}
+
+.wishlist .wishlistItems {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between !important;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 20px;
+    padding-right: 5px;
+}
+
+.wishlist .wishlistItems:last-child {
+    margin-bottom: 0px;
+}
+
+.wishlist .wishlistItems img {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+.wishlist .wishlistItems img:hover{
+    transform:scale(1.1);
+}
+
+.wishlist .wishlistItems h4 {
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+.wishlist .wishlistItems .deletItemIcon {
+    outline: none;
+    border: none;
+}
+
+.wishlist .wishlistItems .deletItemIcon i {
+    font-size: 35px;
+    cursor: pointer;
+    transition: 300ms ease;
+}
+
+.wishlist .wishlistItems .deletItemIcon i:hover {
+    color: var(--color-error);
+    transform: scale(1.25);
+}
+
+.wishlist .bottomWishList .total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.wishlist .bottomWishList .total .totalPriceOfWishList {
+    color: var(--color-primary);
+}
+
+.wishlist .wishlistButton {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wishlist .bottomWishList .wishlistButton .wishBtn {
+    border: 2px solid var(--color-primary);
+    border-radius: 5px;
+    color: var(--color-background-light);
+    padding: 15px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    background: var(--color-primary);
+    transition: 300ms ease;
+    cursor: pointer;
+}
+
+.wishlist .bottomWishList .wishlistButton .wishBtn:hover {
+    background: var(--color-primary-hover);
+    color: var(--color-background-light);
+}
+
+.wishlist .bottomWishList .wishlistButton .bgTrans {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.wishlist .bottomWishList .wishlistButton .bgTrans:hover {
+    background: var(--color-primary);
+    color: var(--color-background-light);
+}
+
+/* mobile layout */
+@media screen and (max-width: 768px) {
+    .cart {
+        width: 100%;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+        z-index: 1500;
+    }
+
+    .cart.active {
+        right: 0;
+    }
+
+    .cart .bgOverLay {
+        display: none;
+        width: 100%;
+        left: -100%;
+        z-index: 1400;
+    }
+
+    .cart.active .bgOverLay {
+        display: none;
+        left: 0;
+        z-index: 1400;
+    }
+
+    .wishlist {
+        width: 100%;
+        left: -100%;
+        padding: 20px;
+        z-index: 1500;
+    }
+
+    .wishlist.active {
+        left: 0;
+    }
+
+    .wishlist .bgOverLay {
+        display: none;
+        width: 100%;
+        right: -100%;
+        z-index: 1400;
+    }
+
+    .wishlist.active .bgOverLay {
+        right: 0;
+    }
+}
+
+/* tablet layout */
+@media screen and (max-width: 1024px) {
+    .cart {
+        width: 100%;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    .cart.active {
+        right: 0;
+    }
+
+    .cart .bgOverLay {
+        display: none;
+        width: 100%;
+        left: -100%;
+    }
+
+    .cart.active .bgOverLay {
+        left: 0;
+    }
+
+    .wishlist {
+        width: 100%;
+        right: -100%;
+        top: 0;
+        bottom: 0;
+        padding: 20px;
+    }
+
+    .wishlist.active {
+        right: 0;
+    }
+
+    .wishlist .bgOverLay {
+        display: none;
+        width: 100%;
+        right: -100%;
+    }
+
+    .wishlist.active .bgOverLay {
+        right: 0;
+    }
+}
