@@ -2,46 +2,54 @@ header div.header_top {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
-   
 }
+
 header div.header_top .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
     padding: 0 1rem;
-   
 }
-header div.header_top .header_top_left{
-    font-size: 1.5rem;
+
+
+.logoutBtn {
+    color: var(--color-secondary);
+    font-size: 0.9rem;
     font-weight: bold;
-    color: var(--secondary);
 }
+
+
+header div.header_top .header_top_left {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-secondary);
+}
+
 header div.header_top .header_top_left span {
     font-size: 1.2rem;
     font-weight: bold;
-    color: var(--primary);
+    color: var(--color-primary);
 }
+
 header div.header_top .header_top_right {
     display: flex;
     gap: 1rem;
 }
 
-header div.header_top .header_top_right .active{
-    color: var(--primary);
-    font-size: 1.2;
+header div.header_top .header_top_right .active {
+    color: var(--color-primary);
+    font-size: 1.2rem;
     font-weight: bold;
-   
-}
-header div.header_top .header_top_right .non-active{
-    display: none;
-   
 }
 
-header div.header_top .header_top_right p.non-active{
+header div.header_top .header_top_right .non-active {
     display: none;
 }
 
+header div.header_top .header_top_right p.non-active {
+    display: none;
+}
 
 header div.header_top .header_top_right a {
     color: #fff;
@@ -49,18 +57,16 @@ header div.header_top .header_top_right a {
 }
 
 header div.header_top .header_top_right a:hover {
-    color:var(--primary);
+    color: var(--color-primary-hover);
 }
-
 
 nav {
-    background-color: #f9f9f9; 
-    color: #333; /* Dark text color */
+    background-color: var(--color-background);
+    color: var(--color-text);
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 2px 4px var(--color-card-shadow);
 }
 
-/* Container inside nav */
 nav .container {
     display: flex;
     justify-content: space-between;
@@ -68,12 +74,10 @@ nav .container {
     flex-wrap: wrap;
 }
 
-/* Logo styling */
 nav .logo img {
-height: 50px;   
+    height: 50px;
 }
 
-/* Navigation links styling */
 nav ul {
     list-style: none;
     display: flex;
@@ -87,7 +91,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333; 
+    color: var(--color-text);
     text-decoration: none;
     font-weight: bold;
     transition: color 200ms ease-in-out;
@@ -95,34 +99,34 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--primary); 
+    color: var(--color-primary-hover);
 }
-
 
 nav ul li a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -3px; 
+    bottom: -3px;
     width: 100%;
-    height: 2px; 
-    background-color: var(--primary); 
+    height: 2px;
+    background-color: var(--color-primary);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 300ms ease-in-out; 
+    transition: transform 300ms ease-in-out;
 }
 
 nav ul li a:hover::after {
     transform: scaleX(1);
 }
+
 nav ul li a.active {
-    color: var(--primary);
+    color: var(--color-primary);
+
     &::after {
         transform: scaleX(1);
     }
 }
 
-/* Search bar styling */
 nav .search {
     display: flex;
     align-items: center;
@@ -130,16 +134,16 @@ nav .search {
 
 nav .search input[type="text"] {
     padding: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-border);
     border-radius: 3px;
-    background-color: #fff; 
-    color: #333; 
+    background-color: var(--color-background-light);
+    color: var(--color-text);
 }
 
 nav .search button {
     padding: 5px 10px;
     border: none;
-    background-color: #333; 
+    background-color: #333;
     color: white;
     border-radius: 3px;
     margin-left: 5px;
@@ -148,34 +152,45 @@ nav .search button {
 }
 
 nav .search button:hover {
-    background-color: #555; 
+    background-color: #555;
 }
 
-
-/* cart and wishlist icons */
 header nav .container .cartHeader {
     display: flex;
     align-items: center;
 }
 
-header nav .container .cartHeader .cartIcon,.wishlistIcon {
+header nav .container .cartHeader .cartIcon,
+.wishlistIcon {
     position: relative;
     margin-right: 10px;
     cursor: pointer;
 }
-header nav .container .cartHeader .cartIcon{
+
+header nav .container .cartHeader .cartIcon {
     margin-left: 15px;
 }
-header nav .container .cartHeader  i {
-    font-size: 24px;
 
+header nav .container .cartHeader i {
+    font-size: 24px;
 }
 
-header nav .container .cartHeader  .countItem {
+header nav .container .cartHeader .countItem {
     position: absolute;
     top: -18px;
     right: -10px;
-    background-color: #d01418;
+    background-color: var(--color-error);
+    color: #ffffff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+header nav .container .cartHeader .countItemWishList {
+    position: absolute;
+    top: -18px;
+    right: -10px;
+    background-color: var(--color-error);
     color: #ffffff;
     border-radius: 50%;
     padding: 2px 6px;
@@ -185,7 +200,6 @@ header nav .container .cartHeader  .countItem {
 header nav .container .cartHeader .totalPrice {
     text-align: right;
     margin-left: 5px;
-    
     border-radius: 5px;
     background-color: #333;
     padding: 0px 5px;
@@ -199,7 +213,7 @@ header nav .container .cartHeader .totalPrice::before {
     display: inline-block;
     position: absolute;
     top: 50%;
-    left: -9px; 
+    left: -9px;
     transform: translateY(-50%);
     width: 0;
     height: 0;
@@ -223,8 +237,6 @@ header nav .container .cartHeader .totalPrice .priceCartHead {
     text-align: center;
 }
 
-
-/* Footer */ 
 .footer {
     background-color: #222222;
     color: #ffffff;
@@ -252,7 +264,7 @@ header nav .container .cartHeader .totalPrice .priceCartHead {
     font-size: 18px;
     margin-bottom: 20px;
     font-weight: bold;
-    color:var(--primary);
+    color: var(--color-primary);
 }
 
 .footer ul {
@@ -267,7 +279,7 @@ header nav .container .cartHeader .totalPrice .priceCartHead {
 }
 
 .footer ul li a:hover {
-    color: var(--primary);
+    color: var(--color-primary);
 }
 
 .social-links a {
@@ -278,7 +290,7 @@ header nav .container .cartHeader .totalPrice .priceCartHead {
 }
 
 .social-links a:hover {
-    color: var(--primary);
+    color: var(--color-primary);
 }
 
 .footer-bottom {
@@ -293,100 +305,97 @@ header nav .container .cartHeader .totalPrice .priceCartHead {
     color: #ffffff;
 }
 
+@media (max-width: 500px) {
+    nav .logo img {
+        order: 1;
+    }
 
-@media (max-width:500px){
-    nav .logo img{
-        order:1;
-    }
     .cartHeader {
-        order : 2
+        order: 2;
     }
+
     nav ul {
         order: 3;
     }
+
     nav .search {
         order: 4;
         margin: 5px auto;
-
     }
 
     nav .search input[type="text"] {
         width: 100%;
     }
+
     nav .search button {
         margin-left: 0;
         border-radius: 0 3px 3px 0;
     }
+
     .cartHeader .cartIcon {
         margin-left: 0;
     }
 
-    .homeCategories{
+    .homeCategories {
         flex-direction: column;
-        
     }
 
-    .homeCategories div  {
+    .homeCategories div {
         width: 100% !important;
         margin: 0;
     }
 
-    .features div{
-       margin: 5px auto;
+    .features div {
+        margin: 5px auto;
     }
 
-    .footer-column{
-      /* flex-wrap: wrap; */
-      flex-direction: column; 
-    
+    .footer-column {
+        flex-direction: column;
     }
+
     .footer-column ul {
-        padding:  0 0 0 2rem;
+        padding: 0 0 0 2rem;
     }
-   
+
     .footer-column div.footer-section {
         width: 100% !important;
     }
-   
 }
 
-@media (min-width:680px){
-    nav .logo img{
-        order:1;
-        /* margin: 0 5px 0 0; */
+@media (min-width: 680px) {
+    nav .logo img {
+        order: 1;
     }
+
     nav ul {
         order: 2;
     }
+
     .cartHeader {
-        order : 3
+        order: 3;
     }
+
     nav .search {
         order: 4;
         margin: 5px auto;
-
     }
-
-
 }
-@media (min-width:796px){
-    nav .logo img{
-        order:1;
+
+@media (min-width: 796px) {
+    nav .logo img {
+        order: 1;
     }
+
     nav ul {
         order: 2;
     }
+
     .cartHeader {
-        order : 4
+        order: 4;
     }
+
     nav .search {
         order: 3;
         margin: 0;
-
     }
-
-
 }
-
-
-

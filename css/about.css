@@ -67,7 +67,8 @@
 
 .our-team .team-members {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 3rem;
     flex-wrap: wrap;
 }
 

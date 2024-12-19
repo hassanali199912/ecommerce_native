@@ -9,31 +9,28 @@
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="../images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="../css/headerandfooter.css">
-    <link rel="stylesheet" href="../css/features.css">
     <link rel="stylesheet" href="../css/uitility.css">
-    <link rel="stylesheet" href="../css/style.css">
+
+    <link rel="stylesheet" href="../css/headerandfooter.css">
     <link rel="stylesheet" href="../css/cart.css">
     <link rel="stylesheet" href="../css/wishlist.css">
 
+    <link rel="stylesheet" href="../css/features.css">
     <link rel="stylesheet" href="../css/product-details.css">
 
     <link rel="stylesheet" href="../css/responsive.css">
+
 </head>
 
 <body>
 
 
+
     <header>
         <div class="header_top">
-            <div class="container ">
-                <p class="header_top_left">Hi<span> Hassan</span> </p>
-                <ul class="header_top_right">
-                    <li><a href="login.html">Login</a></li>
-                    <p> | </p>
-                    <li><a href="register.html">Register</a></li>
-                </ul>
-            </div>
+            <p class="header_top_left">
+
+            </p>
         </div>
 
         <nav>
@@ -55,7 +52,7 @@
                 <div class="cartHeader">
                     <div class="wishlistIcon" onclick="openAndCloseCartAndWishList ('wishlist')">
                         <i class="fa-solid fa-heart"></i>
-                        <span class="countItem">0</span>
+                        <span class="countItemWishList">0</span>
                     </div>
                     <div onclick="openAndCloseCartAndWishList ('cart')" class="cartIcon">
                         <i class="fa-solid fa-cart-shopping"></i>
@@ -70,6 +67,7 @@
 
         </nav>
     </header>
+
 
     <!-- --------------------------------------------------------inside the cart -------------------------------------------------------- -->
     <div class="cart">
@@ -97,8 +95,8 @@
                 <p class="totalPriceOfCart">$0</p>
             </div>
             <div class="cartButton">
-                <a href="#" class="catBtn">Proceed to checkout</a>
-                <button class="catBtn bgTrans">shop Now</button>
+                <a href="shepping.html" class="catBtn">Proceed to checkout</a>
+                <button class="catBtn bgTrans" onclick="window.location.href = 'shop.html'">shop Now</button>
             </div>
         </div>
     </div>
@@ -109,7 +107,7 @@
     <div class="wishlist ">
         <span onclick="openAndCloseCartAndWishList ('wishlist')" class="bgOverLay"></span>
         <div class="topwishlist">
-            <h3>My wishlist <span class="countItemsInsideCart">(0 Item in the wishlist)</span></h3>
+            <h3>My wishlist <span class="countItemsInsideWishList">(0 Item in the wishlist)</span></h3>
             <span class="closewishlist" onclick="openAndCloseCartAndWishList ('wishlist')"><i
                     class="fa-regular fa-circle-xmark"></i></span>
         </div>
@@ -125,44 +123,21 @@
             <!-- product in click from json by ID -->
         </div>
 
+        <!-- bottom part in wish list -->
+        <div class="bottomWishList">
+            <div class="total">
+                <p>Cart subtotal</p>
+                <p class="totalPriceOfWishList">$0</p>
+            </div>
+        </div>
     </div>
     <!-- -------------------------------------------------------End of wishlist-------------------------------------------------------- -->
+
 
     <section class="product-details">
         <div class="container">
             <div class="product-details-container">
-                <div class="left">
-                    <img src="../images/swiper/electronic.jpeg" alt="" class="main-img">
-                    <div class="small-img">
-                        <img src="../images/swiper/electronic.jpeg" alt="" class="small-img-item">
-                        <img src="../images/swiper/jewelery.jpg" alt="" class="small-img-item">
-                        <img src="../images/swiper/men's clothing.jpeg" alt="" class="small-img-item">
-                        <img src="../images/swiper/women's clothing.jpg" alt="" class="small-img-item">
-                    </div>
-                </div>
-                <div class="right">
-                    <h1>Buttons tweed blazer</h1>
-                    <div class="price">
-                        <span>$ 59.0</span>
-                        <span>$ 59.0</span>
-                    </div>
-                    <ul>
-                        <li>Color: <span>Black</span></li>
-                        <li>Category: <span>Electronic</span></li>
-                    </ul>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.</p>
-                    <div class="controllers">
-                        <div class="counter">
-                            <i class="fa-solid fa-minus"></i>
-                            <span>1</span>
-                            <i class="fa-solid fa-plus"></i>
-                        </div>
-                        <button class="btn add-cart btn-primary">Add To Cart</button>
-                        <button class="btn heart">
-                            <i class="fa-solid fa-heart"></i>
-                        </button>
-                    </div>
-                </div>
+
             </div>
     </section>
     <section class="features">
@@ -254,10 +229,10 @@
             </div>
         </div>
     </footer>
-    <script src="../js/cart.js"></script>
-
-    <script src="../js/single-details.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/TopSale.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/single-details.js"></script>
 </body>
 
 </html>

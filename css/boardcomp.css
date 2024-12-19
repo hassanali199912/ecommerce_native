@@ -1,11 +1,11 @@
-
-
 .brodcump {
     height: 20vh;
     width: 100%;
-    background-color: var(--danger);
+    background-color: var(--color-primary);
     color: var(--light-gray);
     font-size: 1.6rem;
+    display: flex;
+    align-items: center;
 }
 
 .brodcump ul {

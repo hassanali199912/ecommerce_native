@@ -41,15 +41,36 @@ button {
 
 /* Root Variables */
 :root {
-  --white: #f9f9f9;
-  --light-gray: #eeeeee;
-  --dark-gray: #333333;
-  --black: #1a1a1a;
+  /* الخلفية الأساسية */
+  --color-background: #f8f9fa; /* يستخدم لخلفية الموقع بالكامل */
 
-  --primary: rgb(230, 81, 0); 
-  --secondary: #2ecc71;
-  --danger: #e74c3c; 
-  --warning: #f1c40f; 
+  /* النصوص الأساسية */
+  --color-text: #212529; /* نصوص رئيسية */
+  --color-text-light: #6c757d; /* نصوص ثانوية أو وصفية */
+
+  /* الألوان البارزة */
+  --color-primary: #ff7f50; /* البرتقالي: الأزرار الرئيسية والعناصر المهمة */
+  --color-primary-hover: #ff6347; /* تأثير hover لعناصر اللون الأساسي */
+
+  --color-secondary: #4caf50; /* الأخضر: أزرار إضافية أو رسائل نجاح */
+  --color-secondary-hover: #45a049; /* تأثير hover للعنصر الأخضر */
+
+  /* ألوان مميزة */
+  --color-highlight: #ffd700; /* الذهبي: تسليط الضوء (مثلاً، التنبيهات أو النجوم). */
+  --color-error: #dc3545; /* الأحمر: التنبيهات أو رسائل الخطأ. */
+
+  /* الحدود وظلال العناصر */
+  --color-border: #e0e0e0; /* حدود خفيفة للأقسام أو البطاقات */
+  --color-card-shadow: rgba(0, 0, 0, 0.1); /* ظل خفيف للبطاقات */
+
+  /* ألوان عامة */
+  --color-link: #007bff; /* الروابط */
+  --color-link-hover: #0056b3; /* Hover للروابط */
+
+  /* ألوان إضافية (للتخصيص والتوسيع لاحقًا) */
+  --color-accent: #e67e22; /* لون مميز يمكن استخدامه حسب الحاجة */
+  --color-background-light: #ffffff; /* خلفيات فرعية (مثلاً بطاقات داخلية) */
+  --color-background-dark: #f1f3f6; /* أقسام داكنة قليلاً للتمييز */
 }
 
 /* General Utility Classes */
@@ -146,4 +167,47 @@ button {
 
 .btn-secondary:hover {
   background-color: darken(var(--secondary), 10%);
+}
+
+
+
+
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
+
+
+.error-div {
+  color: red;
 }

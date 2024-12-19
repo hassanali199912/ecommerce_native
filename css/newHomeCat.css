@@ -1,0 +1,112 @@
+.homeCategories {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 2.5%;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.homeCategories .category {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 22.5%;
+}
+
+.homeCategories .category .card {
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    transition: 300ms ease;
+    cursor: pointer;
+    box-shadow: 0 0 10px var(--color-card-shadow);
+}
+
+.homeCategories .category.electronicsCategory .card {
+    background-color: rgb(243, 152, 147);
+}
+
+.homeCategories .category.menCategory .card {
+    background-color: rgb(171, 209, 148);
+}
+
+.homeCategories .category.womenCategory .card {
+    background-color: rgb(83, 187, 180);
+}
+
+.homeCategories .category.jeweleryCategory .card {
+    background-color: rgb(241, 200, 94);
+}
+
+.homeCategories .category .card-icon {
+    padding: 10px;
+}
+
+.homeCategories .category .card-icon img {
+    width: 200px;
+    height: 150px;
+    margin: auto;
+}
+
+.homeCategories .category .card-category {
+    background-color: var(--color-background-light);
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    text-align: center;
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.homeCategories .category:hover .card {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: rgb(48, 121, 172);
+}
+
+.homeCategories .category:hover {
+    cursor: pointer;
+    transition: 200ms ease;
+    transform: scale(1.1);
+}
+
+.homeCategories .category:hover .card-category {
+    background-color: var(--color-primary);
+    color: var(--color-background-light);
+}
+
+/* for phone layout */
+@media screen and (max-width: 768px) {
+    .homeCategories {
+        justify-content: space-between;
+
+    }
+    .homeCategories .category {
+        width: 100%;
+    }
+
+    .homeCategories .category .card-icon img {
+        width: 300px;
+        height: 250px;
+        margin: auto;
+    }
+}
+
+/* for tablet layout */
+@media screen and (max-width: 1024px) {
+    .homeCategories .category {
+        width: 48%;
+    }
+    .homeCategories .category .card-icon img {
+        width: 300px;
+        height: 250px;
+        margin: auto;
+    }
+}
